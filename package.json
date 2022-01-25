@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-toyota-myt",
+  "name": "node-red-contrib-toyota-myt",
   "version": "1.0.0",
   "description": "Retrieve Data from Toyota MyT App (unofficial)",
   "main": "lib.js",
