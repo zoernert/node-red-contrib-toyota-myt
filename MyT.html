@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    RED.nodes.registerType('MyT',{
+        category: 'Mobility',
+        color: '#3FADB5',
+        defaults: {
+            name: {value:""},
+            username: {value:"", type:"string",required:true},
+            password: {value:"", type:"string",required:true},
+            vin: {value:"", type:"string",required:true}
+        },
+        inputs:1,
+        outputs:3,
+        outputLabels: [
+        "All",
+        "Mileage",
+        "RC Status",
+        ],
+        icon: "car.png",
+        label: function() {
+            return this.name||"MyT Car";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="MyT">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-username"><i class="fa fa-user-o"></i> Email</label>
+        <input type="email" id="node-input-username" placeholder="(your account email in MyT App)">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-key"></i> Password</label>
+        <input type="password" id="node-input-password" placeholder="(your account password in MyT App)">
+    </div>
+    <div class="form-row">
+        <label for="node-input-vin"><i class="fa fa-car"></i> VIN</label>
+        <input type="text" id="node-input-vin" placeholder="(vehicle identification number)">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="MyT">
+    <p>Login information provided will be stored within Node-RED and used to access the Toyota API.</p>
+</script>

@@ -1,0 +1,32 @@
+{
+  "name": "red-contrib-toyota-myt",
+  "version": "1.0.0",
+  "description": "Retrieve Data from Toyota MyT App (unofficial)",
+  "main": "lib.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoernert/node-red-contrib-toyota-myt.git"
+  },
+  "keywords": [
+    "node-red",
+    "toyota",
+    "myt"
+  ],
+  "author": "Thorsten Zoerner <me@thorsten-zoerner.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoernert/node-red-contrib-toyota-myt/issues"
+  },
+  "homepage": "https://github.com/zoernert/node-red-contrib-toyota-myt#readme",
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "node-red": {
+    "nodes": {
+      "MyT": "MyT.js"
+    }
+  }
+}
