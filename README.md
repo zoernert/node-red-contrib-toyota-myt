@@ -26,5 +26,19 @@ msg.payload is array of all objects returned by Toyota server
 {"VehicleInfo":{"AcquisitionDatetime":"2022-01-25T02:28:01Z","RemoteHvacInfo":{"InsideTemperature":22,"RemoteHvacMode":0,"RemoteHvacProhibitionSignal":1,"Temperaturelevel":29,"SettingTemperature":21,"BlowerStatus":0,"FrontDefoggerStatus":0,"RearDefoggerStatus":0,"LatestAcStartTime":"2022-01-25T01:19:23Z","TemperatureDisplayFlag":0},"ChargeInfo":{"PlugInHistory":41,"RemainingChargeTime":65535,"EvTravelableDistance":63.7,"EvTravelableDistanceSubtractionRate":7,"ChargeRemainingAmount":89,"SettingChangeAcceptanceStatus":0,"ChargeType":15,"ChargeWeek":0,"ChargeStartTime":"42:35","ChargeEndTime":"42:35","ConnectorStatus":5,"BatteryPowerSupplyPossibleTime":16383,"ChargingStatus":"none","EvDistanceWithAirCoInKm":59.24,"GasolineTravelableDistance":537,"PlugStatus":45,"GasolineTravelableDistanceUnit":1,"EvDistanceInKm":63.7}},"ReturnCode":"000000"}
 ```
 
+## Maintainer / Imprint
+
+<addr>
+Thorsten Zoerner  <br/>
+Gerhard Weiser Ring 29  <br/>
+69256 Mauer  <br/>
+Germany  <br/>
+  <br/>
++49 6226 968 009 0  <br/>
+  <br/>
+me@thorsten-zoerner.com  <br/>
+</addr>
+
+Project Website: https://co2offset.io/
 ## LICENSE
 [MIT](./LICENSE)
