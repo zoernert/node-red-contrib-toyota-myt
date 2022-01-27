@@ -2,9 +2,9 @@
 
 **Retrieve Data from Toyota MyT App**
 
-[![npm](https://img.shields.io/npm/dt/node-red-contrib-myt.svg)](https://www.npmjs.com/package/node-red-contrib-myt)
-[![npm](https://img.shields.io/npm/v/node-red-contrib-myt.svg)](https://www.npmjs.com/package/node-red-contrib-myt)
-[![CO2Offset](https://api.corrently.io/v2.0/ghgmanage/statusimg?host=node-red-contrib-myt&svg=1)](https://co2offset.io/badge.html?host=node-red-contrib-myt)[![Code Quality](https://api.codiga.io/project/30556/score/svg)](https://app.codiga.io/public/project/30556/node-red-contrib-myt/dashboard)[![CircleCI](https://circleci.com/gh/energychain/node-red-contrib-myt/tree/main.svg?style=svg)](https://circleci.com/gh/energychain/node-red-contrib-myt/tree/main)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fenergychain%2Fnode-red-contrib-myt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%zoernert%2Fnode-red-contrib-myt?ref=badge_shield)
+[![npm](https://img.shields.io/npm/dt/node-red-contrib-toyota-myt.svg)](https://www.npmjs.com/package/node-red-contrib-toyota-myt)
+[![npm](https://img.shields.io/npm/v/node-red-contrib-toyota-myt.svg)](https://www.npmjs.com/package/node-red-contrib-toyota-myt)
+[![CO2Offset](https://api.corrently.io/v2.0/ghgmanage/statusimg?host=node-red-contrib-myt&svg=1)](https://co2offset.io/badge.html?host=node-red-contrib-myt)[![Code Quality](https://api.codiga.io/project/30556/score/svg)](https://app.codiga.io/public/project/30556/node-red-contrib-myt/dashboard)
 
 Disclaimer: Developer/Maintainer is not afffiliated with Toyota. Nor is this an official implementation. It is designed as-is for demo/lab usgage.
 
