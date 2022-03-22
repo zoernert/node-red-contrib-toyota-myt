@@ -5,6 +5,7 @@ module.exports = function(RED) {
         const node = this;
 
         node.on('input', async function(msg) {
+          try {
             let msgAll = {payload:[]};
             let msgMA = null;
             let msgRC = null;
@@ -41,6 +42,7 @@ module.exports = function(RED) {
               msgRC = {payload:rc.data};
               msgAll.payload.push(rc.data);
               node.send([msgAll,msgMA,msgRC]);
+          } catch(e) {}
         });
     }
     RED.nodes.registerType("MyT",MyTNode);
