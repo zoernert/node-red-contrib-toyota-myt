@@ -9,6 +9,8 @@ module.exports = function(RED) {
             let msgAll = {payload:[]};
             let msgMA = null;
             let msgRC = null;
+            let msgPP = null;
+
             const login = await axios.post("https://ssoms.toyota-europe.com/authenticate",{username:config.username,password:config.password},{
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,7 +27,12 @@ module.exports = function(RED) {
               // Retrieve Milage
               const mileage = await axios.get("https://myt-agg.toyota-europe.com/cma/api/vehicle/"+config.vin+"/addtionalInfo",{
                 headers: {
-                  "Cookie":"iPlanetDirectoryPro="+token
+                  'X-TME-LC': 'de-de',
+                  'X-TME-LOCALE': 'de-de',
+                  'X-TME-TOKEN': token,
+                  'Cookie': 'iPlanetDirectoryPro='+token,
+                  'X-TME-APP-VERSION': '4.10.0',
+                  'uuid': uuid
                 }
               });
               msgMA = {payload:mileage.data};
@@ -34,15 +41,32 @@ module.exports = function(RED) {
               // RC Data
               const rc = await axios.get("https://myt-agg.toyota-europe.com/cma/api/vehicles/"+config.vin+"/remoteControl/status",{
                 headers: {
-                  "Cookie":"iPlanetDirectoryPro="+token,
-                  "uuid":uuid,
-                  "X-TME-LOCALE":"de-de"
+                  'X-TME-LC': 'de-de',
+                  'X-TME-LOCALE': 'de-de',
+                  'X-TME-TOKEN': token,
+                  'Cookie': 'iPlanetDirectoryPro='+token,
+                  'X-TME-APP-VERSION': '4.10.0',
+                  'uuid': uuid
                 }
               });
+
               msgRC = {payload:rc.data};
               msgAll.payload.push(rc.data);
-              node.send([msgAll,msgMA,msgRC]);
-          } catch(e) {}
+              const parking = await axios.get("https://myt-agg.toyota-europe.com/cma/api/users/"+uuid+"/vehicle/location",{
+                  headers: {
+                    'X-TME-LC': 'de-de',
+                    'X-TME-LOCALE': 'de-de',
+                    'X-TME-TOKEN': token,
+                    'Cookie': 'iPlanetDirectoryPro='+token,
+                    'X-TME-APP-VERSION': '4.10.0',
+                    'VIN': config.vin
+                  }
+              });
+              msgPP = {payload:parking.data};
+              msgAll.payload.push(parking.data);
+
+              node.send([msgAll,msgMA,msgRC,msgPP]);
+          } catch(e) {console.log(e);}
         });
     }
     RED.nodes.registerType("MyT",MyTNode);
